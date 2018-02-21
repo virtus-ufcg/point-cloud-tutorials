@@ -11,9 +11,18 @@ Install APT dependencies before compile and run each tutorial for Ubuntu 16.04 x
 ## Tutorials:
 
 - [Plane model segmentation](http://pointclouds.org/documentation/tutorials/planar_segmentation.php)
-
 ```
 mkdir planar_segmentation/build && cd planar_segmentation/build
 cmake .. && make
+chmod +x planar_segmentation
 ./planar_segmentation
+```
+
+- [Cylinder model segmentation](http://pointclouds.org/documentation/tutorials/cylinder_segmentation.php#cylinder-segmentation)
+```
+mkdir cylinder_segmentation/build && cd cylinder_segmentation/build
+cmake .. && make
+chmod +x cylinder_segmentation
+mv ../table_scene_mug_stereo_textured.pcd .
+./cylinder_segmentation
 ```
