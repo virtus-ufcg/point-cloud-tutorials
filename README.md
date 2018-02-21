@@ -20,9 +20,10 @@ chmod +x planar_segmentation
 
 - [Cylinder model segmentation](http://pointclouds.org/documentation/tutorials/cylinder_segmentation.php#cylinder-segmentation)
 ```
+rm -rf cylinder_segmentation/build
 mkdir cylinder_segmentation/build && cd cylinder_segmentation/build
 cmake .. && make
 chmod +x cylinder_segmentation
-mv ../table_scene_mug_stereo_textured.pcd .
+cp ../table_scene_mug_stereo_textured.pcd .
 ./cylinder_segmentation
 ```

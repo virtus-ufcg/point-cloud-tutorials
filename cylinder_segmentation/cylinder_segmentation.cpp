@@ -7,6 +7,7 @@
 #include <pcl/sample_consensus/method_types.h>
 #include <pcl/sample_consensus/model_types.h>
 #include <pcl/segmentation/sac_segmentation.h>
+#include <pcl/visualization/cloud_viewer.h>
 
 typedef pcl::PointXYZ PointT;
 
@@ -109,5 +110,12 @@ main (int argc, char** argv)
 	  std::cerr << "PointCloud representing the cylindrical component: " << cloud_cylinder->points.size () << " data points." << std::endl;
 	  writer.write ("table_scene_mug_stereo_textured_cylinder.pcd", *cloud_cylinder, false);
   }
+
+  pcl::visualization::CloudViewer viewer ("Simple Cloud Viewer");
+  viewer.showCloud (cloud);
+  while (!viewer.wasStopped ())
+  {
+  }
+
   return (0);
 }
