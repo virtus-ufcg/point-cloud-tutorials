@@ -27,3 +27,13 @@ chmod +x cylinder_segmentation
 cp ../table_scene_mug_stereo_textured.pcd .
 ./cylinder_segmentation
 ```
+
+- [The CloudViewer](http://pointclouds.org/documentation/tutorials/cloud_viewer.php)
+```
+rm -rf cloud_viewer/build
+mkdir cloud_viewer/build && cd cloud_viewer/build
+cmake .. && make
+chmod +x cloud_viewer
+cp ../my_point_cloud.pcd .
+./cloud_viewer
+```
